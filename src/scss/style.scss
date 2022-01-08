@@ -1,0 +1,20 @@
+@import 'extends/vars';
+@import 'extends/mixins';
+@import 'extends/function';
+@import 'extends/fonts';
+
+#vivienneSaboPremiere,
+#vivienneSaboPresentation,
+#vivienneSaboTryOn {
+  // min-width: 1200px;
+  @include desktop {
+    font-size: (100/92) + vw;
+  }
+  @include mobile {
+    // min-width: 1200px;
+    font-size: (100/20.3) + vw;
+  }
+}
+@import './_vivienneSaboPremiere';
+@import './_vivienneSaboPresentation';
+@import './_vivienneSaboTryOn';

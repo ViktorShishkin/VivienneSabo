@@ -1,0 +1,180 @@
+#vivienneSaboPremiere {
+	display: block;
+	width: 100%;
+	@include mobile {
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+	}
+	p.text {
+		margin: 0;
+		line-height: 1;
+	}
+	.light_text {
+		@include desktop {
+			padding-top: em(76);
+			padding-bottom: em(65);
+		}
+		.text {
+			font-size: em(22);
+			color: $white;
+			font-family: ParisFont;
+			font-style: normal;
+			line-height: em(34);
+			@include mobile {
+				font-size: em(12);
+            	line-height: em(15);
+            	font-weight: 300;
+			}
+		}
+	}
+	.text_years {
+		.text {
+			color: $brown-text;
+			font-size: em(24);
+			font-family: LondonFont;
+			font-style: normal;
+			@include desktop {
+				padding-top: em(8);
+			}
+			@include mobile {
+				font-size: em(12);
+            	font-family: ParisFont;
+            	line-height: em(25);
+			}
+		}
+	}
+	.vivienne_sabo {
+		.text {
+			font-family: LondonFont;
+			font-style: normal;
+			color: $white;
+			&:first-child {
+				font-size: em(43);
+				@include mobile {
+					font-size: em(15);
+				}
+			}
+			&:last-child {
+				font-size: em(14);
+				letter-spacing: em(16);
+				padding-top: em(8);
+				@include mobile {
+					font-size: em(6);
+                	letter-spacing: em(10);
+                	padding-top: em(6);
+				}
+			}
+		}
+	}
+	.hante_conture {
+		.text {
+			font-family: jadynMaria;
+			font-style: normal;
+			color: $brown-text;
+			font-size: em(132);
+			@include mobile {
+				font-size: em(47);
+				font-weight: 300;
+				line-height: 0.66;
+			}
+		}
+	}
+	.premiere {
+		background-image: url('@img/premiereBack.png');
+		background-repeat: no-repeat;
+		background-size: 101% 101%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		box-sizing: border-box;
+		@include desktop {
+			justify-content: space-around;
+			height: em(720);
+		}
+		@include mobile {
+			background-image: url('@img/mob-premiereBack.png');
+			flex-direction: column;
+			padding-top: em(15);
+        	padding-bottom: em(25);
+			border-bottom: none;
+		}
+	}
+	.premiere__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		@include desktop {
+			width: 60%;
+			margin-top: em(-36);
+			margin-right: em(15);
+		}
+		@include mobile {
+			.light_text {
+				padding-top: em(16);
+			}
+		}
+    }
+	.premiere__video {
+		position: relative;
+		border: 2px solid $brown;
+		width: em(380);
+		height: em(670);
+		overflow: hidden;
+
+		@include mobile {
+			width: em(244);
+			height: em(430);
+		}
+		@include desktop {
+			margin-right: em(86);
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: em(85);
+			height: em(85);
+			background: url("@img/play.svg") no-repeat center center/contain;
+		}
+
+		&--load {
+			&::after {
+				content: none;
+			}
+		}
+	}
+	.premiere__preview {
+		position: absolute;
+		left: em(-1);
+		top: em(-1);
+		width: 101%;
+		height: 101%;
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+		background-image: url(../img/screen_vid.png);
+		background-size: 100% 100%;
+	}
+
+	.video {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 101%;
+		border: 0;
+	}
+
+}

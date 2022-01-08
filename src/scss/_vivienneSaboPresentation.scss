@@ -1,0 +1,330 @@
+#vivienneSaboPresentation {
+	display: block;
+	width: 100%;
+	@include mobile {
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+	p.text {
+		margin: 0;
+		line-height: 1;
+	}
+
+	.light_text {
+		.text {
+			font-size: em(22);
+			color: $white;
+			font-family: ParisFont;
+			font-style: normal;
+			line-height: em(34);
+			@include desktop {
+				margin-left: em(20);
+			}
+			@include mobile {
+				font-size: em(12);
+				line-height: em(15);
+            	font-weight: 300;
+			}
+		}
+	}
+
+	.text_years {
+		.text {
+			font-size: em(22);
+			color: $brown-text;
+			font-family: LondonFont;
+			font-style: normal;
+			@include desktop {
+				padding-top: em(18);
+				margin-left: em(15);
+			}
+			@include mobile {
+				font-size: em(12);
+            	line-height: em(18);
+			}
+		}
+	}
+
+	.vivienne_sabo {
+		@include desktop {
+			padding-top: em(19);
+			padding-bottom: em(65);
+			margin-left: em(20);
+		}
+		.text {
+			font-family: LondonFont;
+			font-style: normal;
+			color: $white;
+			&:first-child {
+				font-size: em(46);
+				@include mobile {
+					font-size: em(15);
+				}
+			}
+			&:last-child {
+				font-size: em(18);
+				letter-spacing: em(14);
+				padding-top: em(7);
+				@include desktop {
+					padding-bottom: em(3);
+				}
+				@include mobile {
+					font-size: em(6);
+					letter-spacing: em(10);
+					padding-top: em(6);
+				}
+			}
+		}
+	}
+
+	.hante_conture {
+		.text {
+			font-size: em(132);
+			font-family: jadynMaria;
+			font-style: normal;
+			color: $brown-text;
+			@include desktop {
+				margin-top: em(2.7);
+			}
+ 			@include mobile {
+				font-size: em(50);
+            	font-weight: 300;
+			}
+		}
+	}
+
+	.presentation {
+		background-image: url('@img/presentationBack.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		height: em(720);
+		@include mobile {
+			background-image: url('@img/mob-presentationBack.png');
+			flex-wrap: wrap;
+        	padding-top: em(23);
+			height: em(416);
+		}
+	}
+
+	.presentation__icons {
+		width: 36.5%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: em(32);
+		padding-bottom: em(17);
+		@include mobile {
+			width: 43%;
+            padding-left: em(17);
+            padding-bottom: em(9);
+			margin-top: em(-10);
+		}
+	}
+
+	.presentation__icons_top,
+    .presentation__icons_mid,
+    .presentation__icons_bot {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+	.icon {
+		display: flex;
+	}
+	.image {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% 100%;
+	}
+
+	.icon_1 {
+		@include desktop {
+			padding-top: em(3);
+			padding-right: em(5);
+			padding-bottom: em(5);
+			padding-left: em(6);
+		}
+		.image {
+			width: em(214);
+			height: em(161);
+			background-image: url('@img/presentation_1.png');
+		}
+		@include mobile {
+            padding-right: em(2);
+            .image {
+                width: em(82);
+				height: em(60);
+				background-image: url('@img/mob-presentation_1.png');
+            }
+		}
+	}
+
+	.icon_2 {
+		@include desktop {
+			padding-left: em(5);
+		}
+		.image {
+			width: em(174);
+			height: em(169);
+			background-image: url('@img/presentation_2.png');
+			@include mobile {
+				width: em(84);
+				height: em(60);
+				background-image: url('@img/mob-presentation_2.png');
+			}
+		}
+
+	}
+
+	.icon_3 {
+		@include desktop {
+			padding-top: em(8);
+			padding-right: em(5);
+			padding-left: em(3);
+		}
+		.image {
+			width: em(223);
+			height: em(159);
+			background-image: url('@img/presentation_3.png');
+		}
+		@include mobile {
+			padding-left: em(2);
+			padding-bottom: em(2);
+			padding-right: em(1);
+			.image {
+				width: em(85);
+				height: em(61);
+				background-image: url('@img/mob-presentation_3.png');
+			}
+		}
+	}
+
+	.icon_4 {
+		padding-top: em(6);
+		padding-bottom: em(4);
+		padding-left: em(5);
+		.image {
+			width: em(221);
+			height: em(154);
+			background-image: url('@img/presentation_4.png');
+		}
+		@include mobile {
+			padding-top: em(2);
+            padding-bottom: em(2);
+			padding-left: em(2);
+            .image {
+                width: em(66);
+				height: em(65);
+				background-image: url('@img/mob-presentation_4.png');
+            }
+		}
+	}
+
+	.icon_5 {
+		padding-top: em(27);
+		padding-right: em(42);
+		.image {
+			width: em(211);
+			height: em(279);
+			background-image: url('@img/presentation_5.png');
+		}
+		@include mobile {
+			padding-top: em(5);
+			padding-right: em(6);
+			padding-left: em(4);
+            .image {
+                width: em(83);
+				height: em(111);
+				background-image: url('@img/mob-presentation_5.png');
+            }
+		}
+	}
+
+	.icon_67 {
+		.image {
+			width: em(93);
+			height: em(236);
+			background-image: url('@img/presentation_67.png');
+		}
+		@include mobile {
+			padding-bottom: em(3);
+			position: relative;
+    		z-index: 1;
+            .image {
+                width: em(34);
+				height: em(92);
+				background-image: url('@img/mob-presentation_67.png');
+            }
+		}
+	}
+
+	.presentation__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 20%;
+		@include desktop {
+			height: 100%;
+			margin-top: em(-75);
+			.light_text:nth-child(3) {
+				position: relative;
+				top: em(17);
+			}
+		}
+		@include mobile {
+			order: -1;
+			width: 100%;
+			.light_text {
+                &:first-child {
+					padding-top: em(6);
+                    padding-bottom: em(9);
+                }
+				&:nth-child(3) {
+                    padding-top: em(9);
+                    padding-bottom: em(8);
+                }
+			}
+		}
+	}
+
+	.presentation__image {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		width: 40%;
+		@include desktop {
+			height: 100%;
+			padding-bottom: em(33);
+		}
+		@include mobile {
+			width: 51%;
+			position: relative;
+			bottom: em(15);
+		}
+		.image {
+			width: em(467);
+			height: em(662);
+			background-image: url('@img/presentationGarb.png');
+			@include mobile {
+				background-image: url('@img/mob-presentationGarb.png');
+				width: em(185);
+				height: em(266);
+                margin-left: em(-18);
+			}
+		}
+	}
+
+}

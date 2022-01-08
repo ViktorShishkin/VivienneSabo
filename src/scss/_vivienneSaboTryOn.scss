@@ -1,0 +1,391 @@
+#vivienneSaboTryOn {
+	display: block;
+	width: 100%;
+	p.text {
+		margin: 0;
+		line-height: 1;
+		@include mobile {
+			.br:first-child {
+				display: none;
+			}
+		}
+	}
+
+	.light_text {
+		.text {
+			color: $white;
+			font-family: ParisFont;
+			font-style: normal;
+			font-size: em(25);
+			line-height: em(22);
+			@include mobile {
+				font-size: em(12);
+            	line-height: em(20);
+            	font-weight: 300;
+			}
+		}
+	}
+
+	.vivienne_sabo {
+		@include mobile {
+			padding-top: em(18);
+			margin-bottom: em(-8);
+		}
+		.text {
+			font-family: LondonFont;
+			font-style: normal;
+			color: $white;
+			&:first-child {
+				font-size: em(32);
+				@include mobile {
+					font-size: em(15);
+				}
+			}
+			&:last-child {
+				font-size: em(12);
+				letter-spacing: em(12);
+				padding-top: em(7);
+				@include mobile {
+					font-size: em(6);
+                	letter-spacing: em(10);
+                	padding-top: em(6);
+				}
+			}
+		}
+	}
+
+	.hante_conture {
+		.text {
+			font-family: jadynMaria;
+			font-style: normal;
+			color: $brown-text;
+			font-size: em(135);
+			@include mobile {
+				font-size: em(47);
+            	font-weight: 300;
+            	line-height: 0.66;
+			}
+		}
+	}
+
+	.tryOn {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+		@include desktop {
+			background-image: url('@img/tryOnBack.png');
+			height: em(720);
+			padding-top: em(72);
+			height: em(650);
+		}
+		@include mobile {
+			background-image: url('@img/mob-tryOn_back.png');
+			height: em(575);
+		}
+	}
+
+	.tryOn_top {
+		padding-bottom: em(12);
+	}
+
+    .tryOn__mid {
+        display: flex;
+        align-items: center;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+
+		@include desktop {
+			height: em(380);
+			padding-top: em(48);
+			padding-bottom: em(48);
+			max-width: 100%;
+			text-align: left;
+		}
+		@include mobile {
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+
+	.tryOn__mid_text {
+        display: flex;
+        align-items: flex-start;
+		width: 16.5%;
+		@include desktop {
+        	padding-left: em(59);
+			padding-top: em(18);
+			height: 100%;
+		}
+		@include mobile {
+			order: +2;
+			width: 100%;
+			justify-content: center;
+			margin-bottom: em(17);
+			margin-top: em(20);
+		}
+    }
+
+	.tryOn__mid_garb {
+	    display: flex;
+		justify-content: space-between;
+	    align-items: center;
+		width: 57%;
+		@include desktop {
+			position: relative;
+	    	overflow: visible;
+			margin-left: em(-28);
+			flex-wrap: nowrap;
+
+		}
+		@include mobile {
+			justify-content: center;
+			width: 100%;
+			margin-top: em(23);
+			margin-bottom: em(13);
+		}
+	}
+
+	.garb,
+	.icon {
+		display: flex;
+		.image {
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100% 100%;
+		}
+	}
+
+	.garb_1 {
+	    position: relative;
+	    left: em(54);
+		top: em(15);
+	    .image {
+	        width: em(335);
+			height: em(375);
+			background-image: url('@img/garb_1.png');
+	    }
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.garb_2 {
+	    position: relative;
+	    right: em(41);
+	    z-index: 1;
+		top: em(17);
+		.image {
+	        width: em(245);
+			height: em(381);
+			background-image: url('@img/garb_3.png');
+	    }
+		@include mobile {
+			right: em(33);
+			top: em(4);
+			.image {
+	    	    width: em(221);
+				height: em(290);
+				background-image: url('@img/mob-garb_1t.png');
+				margin-left: em(27);
+	    	}
+		}
+
+	}
+
+	.garb_3 {
+	    @include desktop {
+			position: relative;
+	    	right: em(203);
+			z-index: 2;
+			top: em(23);
+		}
+		.image {
+	        width: em(306);
+			height: em(408);
+			background-image: url('@img/garb_2.png');
+	    }
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.garb_4 {
+	    position: relative;
+	    right: em(282);
+		top: em(9);
+	    .image {
+	        width: em(229);
+			height: em(376);
+			background-image: url('@img/garb_4.png');
+	    }
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.tryOn__mid_icons {
+	    width: 30%;
+	    text-align: right;
+		@include desktop {
+			padding-bottom: em(147);
+			padding-right: em(32);
+		}
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	.icons_top {
+	    display: flex;
+	    flex-wrap: wrap;
+	    width: 100%;
+		@include desktop {
+			align-items: flex-end;
+	    	justify-content: flex-end;
+		}
+		@include mobile {
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.icon_1 {
+		@include desktop {
+	    	padding-right: em(9);
+	    	padding-bottom: em(3);
+		}
+	    .image {
+	        width: em(112);
+			height: em(108);
+			background-image: url('@img/tryOn1_1.png');
+	    }
+		@include mobile {
+			.image {
+                width: em(97);
+				height: em(71);
+				background-image: url('@img/mob-tryOn1_1.png');
+            }
+		}
+	}
+
+	.icon_2 {
+	    @include desktop {
+			padding-right: em(4);
+	    	padding-bottom: em(5);
+		}
+	    .image {
+	        width: em(137);
+	        height: em(104);
+			background-image: url('@img/tryOn1_2.png');
+	    }
+		@include mobile {
+			padding-right: em(6);
+       		padding-left: em(6);
+			.image {
+                width: em(85);
+				height: em(79);
+				background-image: url('@img/mob-tryOn1_2.png');
+            }
+		}
+	}
+
+	.icon_3 {
+		padding-top: em(5);
+		padding-right: em(3);
+		padding-bottom: em(2);
+	    .image {
+	        width: em(142);
+			height: em(99);
+			background-image: url('@img/tryOn1_3.png');
+	    }
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.icon_4 {
+		@include desktop {
+			padding-top: em(4);
+		}
+		.image {
+			width: em(144);
+			height: em(103);
+			background-image: url('@img/tryOn1_4.png');
+		}
+		@include mobile {
+			.image {
+                width: em(100);
+				height: em(71);
+				background-image: url('@img/mob-tryOn1_3.png');
+            }
+		}
+	}
+
+	.icons_bot {
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-items: flex-end;
+	    justify-content: flex-end;
+	    width: 100%;
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.icon_56 {
+	    .image {
+	        width: em(62);
+			height: em(152);
+			background-image: url('@img/tryOn1_56.png');
+	    }
+	}
+
+	.icon_7 {
+	    padding-top: em(16);
+	    padding-left: em(12);
+	    .image {
+	        width: em(137);
+			height: em(181);
+			background-image: url('@img/tryOn1_7.png');
+		}
+	}
+
+	.tryOn__button {
+		display: flex;
+	}
+
+	.button {
+		letter-spacing: em(1.1);
+        color: $brown-light;
+        background: $black;
+		text-decoration: none;
+		font-family: ParisFont, Arial, sans-serif;
+		font-style: normal;
+		border: em(3) solid $brown;
+		border-radius: em(27);
+		padding: em(6) em(27);
+		font-size: em(25);
+
+		&:hover {
+			cursor: pointer;
+			border-color: $brown-light;
+		}
+		@include desktop {
+			font-weight: 600;
+			margin-left: em(38);
+		}
+		@include mobile {
+			font-family: LondonFont, Arial, sans-serif;
+			border: em(2) solid $brown;
+			border-radius: em(22);
+			padding: em(7) em(32);
+			font-size: em(13);
+		}
+	}
+}
